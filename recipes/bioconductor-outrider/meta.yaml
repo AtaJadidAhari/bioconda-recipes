@@ -1,6 +1,6 @@
-{% set version = "1.24.0" %}
+{% set version = "1.30.0" %}
 {% set name = "OUTRIDER" %}
-{% set bioc = "3.20" %}
+{% set bioc = "3.21" %}
 
 about:
   description: Identification of aberrant gene expression in RNA-seq data. Read count expectations are modeled by an autoencoder to control for confounders in the data. Given these expectations, the RNA-seq read counts are assumed to follow a negative binomial distribution with a gene-specific dispersion. Outliers are then identified as read counts that significantly deviate from this distribution. Furthermore, OUTRIDER provides useful plotting functions to analyze and visualize the results.
@@ -95,12 +95,9 @@ requirements:
     - r-scales
 
 source:
-  md5: ecb42761f893c9a73a6a0195fa4ff84f
+  md5: 7f814de7f211e264db118b342af9ab64
   url:
-    - https://bioconductor.org/packages/{{ bioc }}/bioc/src/contrib/{{ name }}_{{ version }}.tar.gz
-    - https://bioconductor.org/packages/{{ bioc }}/bioc/src/contrib/Archive/{{ name }}/{{ name }}_{{ version }}.tar.gz
-    - https://bioarchive.galaxyproject.org/{{ name }}_{{ version }}.tar.gz
-    - https://depot.galaxyproject.org/software/bioconductor-{{ name|lower }}/bioconductor-{{ name|lower }}_{{ version }}_src_all.tar.gz
+    - https://github.com/gagneurlab/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
 
 test:
   commands:
